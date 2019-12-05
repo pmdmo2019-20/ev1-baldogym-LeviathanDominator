@@ -91,4 +91,36 @@ object LocalRepository : Repository {
         return trainingSessions
     }
 
+    private var weekSchedule: List<TrainingSession> = emptyList()
+
+    init {
+        weekSchedule = createWeekSchedule()
+    }
+
+    override fun queryWeekSchedule(): List<TrainingSession> {
+        return weekSchedule
+    }
+
+    override fun queryMondayTrainingSessions(): List<TrainingSession> {
+        return weekSchedule.filter { it.weekDay == WeekDay.MONDAY }
+    }
+
+    override fun queryTuesdayTrainingSessions(): List<TrainingSession> {
+        return weekSchedule.filter { it.weekDay == WeekDay.TUESDAY }    }
+
+    override fun queryWednesdayTrainingSessions(): List<TrainingSession> {
+        return weekSchedule.filter { it.weekDay == WeekDay.WEDNESDAY }    }
+
+    override fun queryThursdayTrainingSessions(): List<TrainingSession> {
+        return weekSchedule.filter { it.weekDay == WeekDay.THURSDAY }    }
+
+    override fun queryFridayTrainingSessions(): List<TrainingSession> {
+        return weekSchedule.filter { it.weekDay == WeekDay.FRIDAY }    }
+
+    override fun querySaturdayTrainingSessions(): List<TrainingSession> {
+        return weekSchedule.filter { it.weekDay == WeekDay.SATURDAY }    }
+
+    override fun querySundayTrainingSessions(): List<TrainingSession> {
+        return weekSchedule.filter { it.weekDay == WeekDay.SUNDAY }    }
+
 }

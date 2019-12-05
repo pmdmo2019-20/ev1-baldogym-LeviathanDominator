@@ -11,4 +11,6 @@
 
     <dimen name="session_root_padding">16dp</dimen>
     <dimen name="session_vertical_margin">8dp</dimen>
+    <dimen name="name_size">24sp</dimen>
+    <dimen name="trainer_size">18sp</dimen>
 </resources>

@@ -9,4 +9,100 @@
 
     <!-- TODO -->
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lstSchedule"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblWeekDay"
+        tools:listitem="@layout/schedule_activity_item" />
+
+    <TextView
+        android:id="@+id/lblWeekDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/schedule_monday"
+        app:layout_constraintBottom_toTopOf="@+id/lstSchedule"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblMonday" />
+
+    <TextView
+        android:id="@+id/lblMonday"
+        style="@style/weekbar_element"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/schedule_mon"
+        app:layout_constraintBottom_toTopOf="@+id/lblWeekDay"
+        app:layout_constraintEnd_toStartOf="@+id/lblTuesday"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblTuesday"
+        style="@style/weekbar_element"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/schedule_tue"
+        app:layout_constraintBottom_toTopOf="@+id/lblWeekDay"
+        app:layout_constraintEnd_toStartOf="@+id/lblWednesday"
+        app:layout_constraintStart_toEndOf="@+id/lblMonday"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblWednesday"
+        style="@style/weekbar_element"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/schedule_wed"
+        app:layout_constraintBottom_toBottomOf="@+id/lblMonday"
+        app:layout_constraintEnd_toStartOf="@+id/lblThursday"
+        app:layout_constraintStart_toEndOf="@+id/lblTuesday"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblThursday"
+        style="@style/weekbar_element"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/schedule_thu"
+        app:layout_constraintBottom_toBottomOf="@+id/lblWednesday"
+        app:layout_constraintEnd_toStartOf="@+id/lblFriday"
+        app:layout_constraintStart_toEndOf="@+id/lblWednesday"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblFriday"
+        style="@style/weekbar_element"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/schedule_fri"
+        app:layout_constraintBottom_toBottomOf="@+id/lblWednesday"
+        app:layout_constraintEnd_toStartOf="@+id/lblSaturday"
+        app:layout_constraintStart_toEndOf="@+id/lblThursday"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblSaturday"
+        style="@style/weekbar_element"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/schedule_sat"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriday"
+        app:layout_constraintEnd_toStartOf="@+id/lblSunday"
+        app:layout_constraintStart_toEndOf="@+id/lblFriday"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblSunday"
+        style="@style/weekbar_element"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/schedule_sun"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriday"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblSaturday"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
