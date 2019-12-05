@@ -8,8 +8,6 @@
     android:padding="@dimen/schedule_item_padding"
     tools:context=".ui.schedule.ScheduleActivity">
 
-    <!-- TODO -->
-
     <TextView
         android:id="@+id/lblTime"
         android:layout_width="wrap_content"

@@ -86,7 +86,7 @@ class ScheduleActivityViewModel(
     }
 
     fun join(trainingSession: TrainingSession) {
-        var session = trainingSession.copy()
+        val session = trainingSession.copy()
         session.userJoined = !session.userJoined
         _joined.value = Event(trainingSession)
     }

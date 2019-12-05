@@ -29,7 +29,7 @@ const val TRAINING_USERJOINED = "TRAINING_USERJOINED"
 
 class ScheduleActivity : AppCompatActivity() {
 
-    private val viewModel: ScheduleActivityViewModel by viewModels{
+    private val viewModel: ScheduleActivityViewModel by viewModels {
         ScheduleActivityViewModelFactory(LocalRepository, application)
     }
     private val listAdapter: ScheduleActivityAdapter = ScheduleActivityAdapter().apply {
@@ -80,49 +80,50 @@ class ScheduleActivity : AppCompatActivity() {
     }
 
     private fun setListeners() {
-        lblMonday!!.setOnClickListener{
+        lblMonday!!.setOnClickListener {
             viewModel.filterMonday()
         }
-        lblTuesday!!.setOnClickListener{
+        lblTuesday!!.setOnClickListener {
             viewModel.filterTuesday()
         }
-        lblWednesday!!.setOnClickListener{
+        lblWednesday!!.setOnClickListener {
             viewModel.filterWednesday()
         }
-        lblThursday!!.setOnClickListener{
+        lblThursday!!.setOnClickListener {
             viewModel.filterThursday()
         }
-        lblFriday!!.setOnClickListener{
+        lblFriday!!.setOnClickListener {
             viewModel.filterFriday()
         }
-        lblSaturday!!.setOnClickListener{
+        lblSaturday!!.setOnClickListener {
             viewModel.filteSaturday()
         }
-        lblSunday!!.setOnClickListener{
+        lblSunday!!.setOnClickListener {
             viewModel.filterSunday()
         }
     }
 
     private fun setupObservers() {
-        viewModel.trainingSessions.observe(this){
+        viewModel.trainingSessions.observe(this) {
             showTrainingSessions(it)
         }
-        viewModel.currentFilter.observe(this){
+        viewModel.currentFilter.observe(this) {
             lblDay?.text = it.toString()
         }
-        viewModel.joined.observeEvent(this){
+        viewModel.joined.observeEvent(this) {
             joinTrainingSession(it)
         }
     }
 
     private fun joinTrainingSession(trainingSession: TrainingSession) {
-          viewModel.join(trainingSession)
+        viewModel.join(trainingSession)
     }
 
     private fun showTrainingSessions(trainingSessions: List<TrainingSession>) {
-        lstSchedule.post{
+        lstSchedule.post {
             listAdapter.submitList(trainingSessions)
-        }    }
+        }
+    }
 
     private fun setupRecyclerView() {
         lstSchedule.run {

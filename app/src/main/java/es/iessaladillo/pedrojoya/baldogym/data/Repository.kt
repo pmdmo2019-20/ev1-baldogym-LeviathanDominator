@@ -4,9 +4,6 @@ import es.iessaladillo.pedrojoya.baldogym.data.entity.TrainingSession
 
 interface Repository {
 
-    // TODO
-
-
     fun queryWeekSchedule(): List<TrainingSession>
     fun queryMondayTrainingSessions(): List<TrainingSession>
     fun queryTuesdayTrainingSessions(): List<TrainingSession>

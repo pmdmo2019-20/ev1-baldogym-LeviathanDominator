@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".ui.trainingsession.TrainingSessionActivity">
 
-    <!-- TODO -->
-
     <ImageView
         android:id="@+id/imgPhoto"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/schedule_item_padding"
+        android:contentDescription="@string/session_imgPhoto"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/lblName"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,6 +23,7 @@
         android:id="@+id/lblName"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_margin="@dimen/schedule_item_padding"
         android:textSize="@dimen/name_size"
         app:layout_constraintBottom_toTopOf="@+id/lblTrainer"
         app:layout_constraintStart_toStartOf="parent" />
@@ -31,6 +32,7 @@
         android:id="@+id/lblTrainer"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_margin="@dimen/schedule_item_padding"
         android:textSize="@dimen/trainer_size"
         app:layout_constraintBottom_toTopOf="@+id/lblWeekDay"
         app:layout_constraintStart_toStartOf="parent" />
@@ -39,6 +41,7 @@
         android:id="@+id/lblWeekDay"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_margin="@dimen/schedule_item_padding"
         app:layout_constraintBottom_toTopOf="@+id/lblTime"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -46,6 +49,7 @@
         android:id="@+id/lblTime"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_margin="@dimen/schedule_item_padding"
         app:layout_constraintBottom_toTopOf="@+id/lblRoom"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -53,6 +57,7 @@
         android:id="@+id/lblRoom"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_margin="@dimen/schedule_item_padding"
         app:layout_constraintBottom_toTopOf="@+id/lblDescription"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -60,7 +65,7 @@
         android:id="@+id/lblDescription"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginBottom="@dimen/session_vertical_margin"
+        android:layout_margin="@dimen/schedule_item_padding"
         app:layout_constraintBottom_toTopOf="@+id/llFooter"
         app:layout_constraintStart_toStartOf="parent" />
 
